@@ -5,7 +5,9 @@
 //     "Ingrese su edad así podremos verificar si es apto para acceder al carnet de conducir: "
 //   )
 // );
-
+// if (isNaN(edad)) {
+//   alert("El valor introducido no es correcto.");
+// }
 // if (edad >= 18 && edad <= 65) {
 //   document.write(`Su edad es ${edad}, ¡enhorabuena puede acceder 😊!`);
 // } else {
@@ -20,13 +22,6 @@
 // 8-9: Notable
 // 10: Sobresaliente
 // Si ingreso un número que no esté dentro del rango de 0 a 10 mostrar un mensaje de “número erróneo”. Si el número ingresado no es válido mostrar el mensaje “Introduce un número válido”.
-// Ejemplo:
-// Input: 5
-// Input: 50
-// Input: hola10
-// Output: Suficiente
-// Output: Número erróneo
-// Output: Introduce un número válido
 
 // let nota = parseInt(
 //   prompt("Ingrese una nota del 0-10 para obteber su valoración:")
@@ -95,7 +90,7 @@
 // } else {
 //   while (numero) {
 //     sumaNumeros = parseFloat(sumaNumeros) + parseFloat(numero);
-//     numero = prompt("Ingresa más números para hacer la suma total:");
+//     numero = prompt("Ingrese más números para hacer la suma total:");
 //   }
 // }
 
@@ -111,116 +106,116 @@
 // Ejemplo:
 // Input:  40773821
 // Output: ‘L’
-let isANumber = false;
-let dni = 0;
-while (isANumber == false) {
-  dni = prompt("Por favor, introduzca su DNI sin letra");
-  if (!isNaN(dni)) {
-    isANumber = true;
-  }
-  if (isNaN(dni)) {
-    alert("ERROR, solo se pueden introducir números.");
-  }
-  dni = parseInt(dni);
-  if (dni < 0 || dni > 99999999) {
-    alert("ERROR, el número del DNI tiene que estar entre 0 y 99999999.");
-    isANumber = false;
-  } else {
-    switch (dni % 23) {
-      case 0:
-        document.write(`<h1>${dni}T</h1>`);
-        isANumber = false;
-        break;
-      case 1:
-        document.write(`<h1>${dni}R</h1>`);
-        isANumber = false;
-        break;
-      case 2:
-        document.write(`<h1>${dni}W</h1>`);
-        isANumber = false;
-        break;
-      case 3:
-        document.write(`<h1>${dni}A</h1>`);
-        isANumber = false;
-        break;
-      case 4:
-        document.write(`<h1>${dni}G</h1>`);
-        isANumber = false;
-        break;
-      case 5:
-        document.write(`<h1>${dni}M</h1>`);
-        isANumber = false;
-        break;
-      case 6:
-        document.write(`<h1>${dni}Y</h1>`);
-        isANumber = false;
-        break;
-      case 7:
-        document.write(`<h1>${dni}F</h1>`);
-        isANumber = false;
-        break;
-      case 8:
-        document.write(`<h1>${dni}P</h1>`);
-        isANumber = false;
-        break;
-      case 9:
-        document.write(`<h1>${dni}D</h1>`);
-        isANumber = false;
-        break;
-      case 10:
-        document.write(`<h1>${dni}X</h1>`);
-        isANumber = false;
-        break;
-      case 11:
-        document.write(`<h1>${dni}B</h1>`);
-        isANumber = false;
-        break;
-      case 12:
-        document.write(`<h1>${dni}N</h1>`);
-        isANumber = false;
-        break;
-      case 13:
-        document.write(`<h1>${dni}J</h1>`);
-        isANumber = false;
-        break;
-      case 14:
-        document.write(`<h1>${dni}Z</h1>`);
-        isANumber = false;
-        break;
-      case 15:
-        document.write(`<h1>${dni}S</h1>`);
-        isANumber = false;
-        break;
-      case 16:
-        document.write(`<h1>${dni}Q</h1>`);
-        isANumber = false;
-        break;
-      case 17:
-        document.write(`<h1>${dni}V</h1>`);
-        isANumber = false;
-        break;
-      case 18:
-        document.write(`<h1>${dni}H</h1>`);
-        isANumber = false;
-        break;
-      case 19:
-        document.write(`<h1>${dni}L</h1>`);
-        isANumber = false;
-        break;
-      case 20:
-        document.write(`<h1>${dni}C</h1>`);
-        isANumber = false;
-        break;
-      case 21:
-        document.write(`<h1>${dni}K</h1>`);
-        isANumber = false;
-        break;
-      case 22:
-        document.write(`<h1>${dni}E</h1>`);
-        isANumber = false;
-        break;
-      default:
-        break;
-    }
-  }
-}
+// let isANumber = false;
+// let dni = 0;
+// while (isANumber == false) {
+//   dni = prompt("Por favor, introduzca su DNI sin letra");
+//   if (!isNaN(dni)) {
+//     isANumber = true;
+//   }
+//   if (isNaN(dni)) {
+//     alert("ERROR, solo se pueden introducir números.");
+//   }
+//   dni = parseInt(dni);
+//   if (dni < 0 || dni > 99999999) {
+//     alert("ERROR, el número del DNI tiene que estar entre 0 y 99999999.");
+//     isANumber = false;
+//   } else {
+//     switch (dni % 23) {
+//       case 0:
+//         document.write(`<h1>${dni}T</h1>`);
+//         isANumber = false;
+//         break;
+//       case 1:
+//         document.write(`<h1>${dni}R</h1>`);
+//         isANumber = false;
+//         break;
+//       case 2:
+//         document.write(`<h1>${dni}W</h1>`);
+//         isANumber = false;
+//         break;
+//       case 3:
+//         document.write(`<h1>${dni}A</h1>`);
+//         isANumber = false;
+//         break;
+//       case 4:
+//         document.write(`<h1>${dni}G</h1>`);
+//         isANumber = false;
+//         break;
+//       case 5:
+//         document.write(`<h1>${dni}M</h1>`);
+//         isANumber = false;
+//         break;
+//       case 6:
+//         document.write(`<h1>${dni}Y</h1>`);
+//         isANumber = false;
+//         break;
+//       case 7:
+//         document.write(`<h1>${dni}F</h1>`);
+//         isANumber = false;
+//         break;
+//       case 8:
+//         document.write(`<h1>${dni}P</h1>`);
+//         isANumber = false;
+//         break;
+//       case 9:
+//         document.write(`<h1>${dni}D</h1>`);
+//         isANumber = false;
+//         break;
+//       case 10:
+//         document.write(`<h1>${dni}X</h1>`);
+//         isANumber = false;
+//         break;
+//       case 11:
+//         document.write(`<h1>${dni}B</h1>`);
+//         isANumber = false;
+//         break;
+//       case 12:
+//         document.write(`<h1>${dni}N</h1>`);
+//         isANumber = false;
+//         break;
+//       case 13:
+//         document.write(`<h1>${dni}J</h1>`);
+//         isANumber = false;
+//         break;
+//       case 14:
+//         document.write(`<h1>${dni}Z</h1>`);
+//         isANumber = false;
+//         break;
+//       case 15:
+//         document.write(`<h1>${dni}S</h1>`);
+//         isANumber = false;
+//         break;
+//       case 16:
+//         document.write(`<h1>${dni}Q</h1>`);
+//         isANumber = false;
+//         break;
+//       case 17:
+//         document.write(`<h1>${dni}V</h1>`);
+//         isANumber = false;
+//         break;
+//       case 18:
+//         document.write(`<h1>${dni}H</h1>`);
+//         isANumber = false;
+//         break;
+//       case 19:
+//         document.write(`<h1>${dni}L</h1>`);
+//         isANumber = false;
+//         break;
+//       case 20:
+//         document.write(`<h1>${dni}C</h1>`);
+//         isANumber = false;
+//         break;
+//       case 21:
+//         document.write(`<h1>${dni}K</h1>`);
+//         isANumber = false;
+//         break;
+//       case 22:
+//         document.write(`<h1>${dni}E</h1>`);
+//         isANumber = false;
+//         break;
+//       default:
+//         break;
+//     }
+//   }
+// }
