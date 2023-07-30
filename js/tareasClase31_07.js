@@ -212,7 +212,7 @@ class Persona {
     let indiceAleatorio = Math.floor(Math.random() * letras.length);
     let letraAlAzar = letras.charAt(indiceAleatorio);
     document.write(
-      "El número alternativo de su DNI es: " + numeroDNI + letraAlAzar
+      "El número alternativo de su DNI es: " + numeroDNI + letraAlAzar + "<br>"
     );
   }
 }
