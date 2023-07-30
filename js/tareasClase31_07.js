@@ -189,9 +189,9 @@ class Persona {
   }
   esMayorDeEdad() {
     if (this.edad >= 18) {
-      document.write(`Su edad es ${this.edad}, es mayor de edad.`);
+      document.write(`Su edad es ${this.edad}, es mayor de edad. <br><br>`);
     } else {
-      document.write(`Su edad es ${this.edad}, es menor de edad.`);
+      document.write(`Su edad es ${this.edad}, es menor de edad. <br><br>`);
     }
   }
   mostrarDatos() {
@@ -212,7 +212,10 @@ class Persona {
     let indiceAleatorio = Math.floor(Math.random() * letras.length);
     let letraAlAzar = letras.charAt(indiceAleatorio);
     document.write(
-      "El número alternativo de su DNI es: " + numeroDNI + letraAlAzar + "<br>"
+      "El número alternativo de su DNI es: " +
+        numeroDNI +
+        letraAlAzar +
+        "<br><br>"
     );
   }
 }
