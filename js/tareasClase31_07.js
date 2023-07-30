@@ -205,9 +205,15 @@ class Persona {
       `Sexo: ${this.sexo} <br><br>`
     );
   }
+
   generarDni() {
-    document.write("El número alternativo de su DNI es: ");
-    document.write(Math.floor(Math.random() * 100000000));
+    let letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let numeroDNI = Math.floor(Math.random() * 90000000) + 10000000;
+    let indiceAleatorio = Math.floor(Math.random() * letras.length);
+    let letraAlAzar = letras.charAt(indiceAleatorio);
+    document.write(
+      "El número alternativo de su DNI es: " + numeroDNI + letraAlAzar
+    );
   }
 }
 
