@@ -50,22 +50,73 @@ const devolverEstilos = () => {
 // - Utilizando JavaScript, actualiza el contenido del párrafo para mostrar la
 // hora actualizada cada segundo.
 
-let horaActual = document.querySelector("#textoHora");
-const fecha = new Date();
+const verHora = () => {
+  const fecha = new Date();
 
-const hora = fecha.getHours();
-const minutos = fecha.getMinutes();
-const segundos = fecha.getSeconds();
+  const hora = fecha.getHours();
+  const minutos = fecha.getMinutes();
+  const segundos = fecha.getSeconds();
 
-horaActual.textContent = `La hora actual es: ${hora} : ${minutos} : ${segundos}`;
+  let horaActual = document.querySelector("#textoHora");
+  horaActual.textContent = `La hora actual es: ${hora} : ${minutos} : ${segundos}`;
+};
+
+setInterval(verHora, 1000);
+
+verHora();
 
 // 5. Lista de tareas:
 // - Crea un formulario con un campo de texto y un botón en tu HTML.
 // - Al hacer clic en el botón, agrega el contenido del campo de texto como un
 // nuevo elemento de lista <li> a una lista <ul> existente en la página.
 
+class Producto {
+  constructor(nombreProducto) {
+    this.nombreProducto = nombreProducto;
+  }
+}
+
+const productos = [];
+
+let producto = document.querySelector("#productos");
+let listaCompleta = document.querySelector("#listaCompleta");
+
+const guardarProducto = (event) => {
+  event.preventDefault();
+
+  const nuevoProducto = new Producto(producto.value);
+  productos.push(nuevoProducto);
+  document.querySelector("#listaCompra").reset();
+  producto.focus();
+
+  const listarProductos = productos.map((producto) => {
+    return `<li>${producto.nombreProducto}</li>`;
+  });
+
+  listaCompleta.innerHTML = listarProductos.join("");
+};
+
 // 6. Cambiar el tamaño de texto:
 // - Crea un párrafo en tu HTML con un ID único y dos botones: "Aumentar" y
 // "Disminuir".
 // - Al hacer clic en "Aumentar", aumenta el tamaño del texto en el párrafo.
 // - Al hacer clic en "Disminuir", disminuye el tamaño del texto en el párrafo.
+
+let aumentaFuente = document.querySelector("#aumentar");
+let disminuyeFuente = document.querySelector("#disminuir");
+let textoFuente = document.querySelector("#cambioFuente");
+
+const aumentarFuente = () => {
+  textoFuente.style.fontSize = "20px";
+};
+
+const disminuirFuente = () => {
+  textoFuente.style.fontSize = "10px";
+};
+
+const volverEstadoNormal = () => {
+  textoFuente.textContent = `En este texto podrás ver como al pulsar el botón "Aumentar" la fuente de la
+  letra aumenta su
+  tamaño, y al
+  pulsar "Disminuir" su tamaño disminuye. ¡Adelante!`;
+};
