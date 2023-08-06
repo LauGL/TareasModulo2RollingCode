@@ -105,11 +105,14 @@ const guardarProducto = (event) => {
 let aumentaFuente = document.querySelector("#aumentar");
 let disminuyeFuente = document.querySelector("#disminuir");
 let textoFuente = document.querySelector("#cambioFuente");
+let size = 10;
 
 const aumentarFuente = () => {
-  textoFuente.style.fontSize = "20px";
+  size += 10;
+  textoFuente.style.fontSize = `${size}px`;
 };
 
 const disminuirFuente = () => {
-  textoFuente.style.fontSize = "10px";
+  size -= 10;
+  textoFuente.style.fontSize = `${size}px`;
 };
