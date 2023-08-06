@@ -113,10 +113,3 @@ const aumentarFuente = () => {
 const disminuirFuente = () => {
   textoFuente.style.fontSize = "10px";
 };
-
-const volverEstadoNormal = () => {
-  textoFuente.textContent = `En este texto podrás ver como al pulsar el botón "Aumentar" la fuente de la
-  letra aumenta su
-  tamaño, y al
-  pulsar "Disminuir" su tamaño disminuye. ¡Adelante!`;
-};
